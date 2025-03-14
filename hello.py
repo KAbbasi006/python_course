@@ -1,3 +1,4 @@
+import random
 # print statement
 print("Hello World from Komal")
 
@@ -111,3 +112,47 @@ msg = f"""abcdefghijklmnopqrst
 qwertyuiiplkjhgfdsaa
 mnbvcxxzasdfghhjkpo"""
 print(msg.split("\n"))
+
+
+
+byte_data:bytes = b"Hello"
+byte_data[1] = 22 # cannot assign anything. it is immutable
+print(byte_data[1])
+
+
+pak = ['a', 'b', 'c', 'd', 'e']
+print(", ".join(pak))
+
+
+msg = "Hello world"
+print(msg.replace("hello", "Hi"))
+
+
+
+runs = random.randint(0,150)
+print(runs)
+
+balls = 49
+if runs>100 and balls<runs:
+    print("🔔 King")
+else:
+    print("Try Again!")
+
+
+
+user1 = {
+    "name":"Komal",
+    "age":28,
+    "is_married": True
+}
+print(user1["name"])
+
+
+num = ['a','b', 'c']
+print(num.pop())
+print(num.append('z'))
+print(num)
+
+
+num = {'a', 'b', 'c', 'd','a'}
+print(num)
