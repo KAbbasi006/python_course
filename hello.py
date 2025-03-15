@@ -1,4 +1,7 @@
-import random
+# import random
+
+
+
 # print statement
 print("Hello World from Komal")
 
@@ -156,3 +159,111 @@ print(num)
 
 num = {'a', 'b', 'c', 'd','a'}
 print(num)
+
+
+
+is_teacher = True
+print(id(is_teacher))
+
+
+
+a = 'Komal'
+b = "Abbasi"
+c = a + " " +b
+print(c)
+
+a = 12
+b = float('12')
+print(a+b)
+
+a =( "Komal","Abbasi", "Maha")
+a[0]="Sana" 
+print(a)
+
+
+a = [1, 2, 3, 4, 5, 6, 1, 2, 6] 
+b = {1, 2, 3, 4, 5, 6, 1, 2, 6}
+print(a)
+print(b)
+
+
+def greet():
+    print("Hello function")
+print("Hello")
+
+greet()
+
+
+def greet(name):
+    print(f"Hello from {name}")
+    return "Returned from Function"
+print("Hello")
+greet("Komal")
+
+
+def greet(name):
+    print(f"Hello from {name}")
+    return "Returned from function"
+returned_value = greet("Okasha")
+print(returned_value)
+
+
+num = [1, 2, 3, 4, 5]
+for i in num:
+    print (i)
+
+a = set(range(1,11))
+print(a)
+
+print(list(range(1,5)))
+
+
+range_fn = range(1,15)
+for num in range_fn:
+    print(num)
+
+num = iter(range(1,11))
+while True:
+    try:
+        print(next(num))
+    except StopIteration:
+        break
+
+iftar = ["samosay", "pakoray", "sharbat"]
+iftar[2] = "chaat"
+iftar.pop()
+iftar.append("Dahi phulki")
+iftar.remove("samosay")
+print(iftar)
+
+#tuple-count
+iftar = ("samosay", "pakoray", "sharbat", "pakoray", "pakoray")
+print(iftar.count("pakoray"))
+
+#tuple-index
+iftar = ("chat","samosay", "pakoray", "sharbat", "pakoray", "pakoray" )
+print(iftar.index("sharbat"))
+
+iftar = ("chat","samosay", "pakoray", "sharbat", "pakoray", "pakoray" )
+print(set(iftar))
+print(list(iftar))
+
+iftar = ["chat","samosay", "pakoray", "sharbat", "pakoray", "pakoray"]
+print(set(iftar))
+print(tuple(iftar))
+
+
+iftar = {"chat","samosay", "pakoray", "sharbat", "pakoray", "pakoray"}
+print(list(iftar))
+print(tuple(iftar))
+
+iftar = {'samosay', 'pakoray'}
+iftar.remove("pakoray")
+iftar[0] = "chaat"
+print(iftar)
+
+
+i = 1
+while i<=10:
+    print(i)
+    i = i+1
