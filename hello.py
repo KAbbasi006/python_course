@@ -267,3 +267,152 @@ i = 1
 while i<=10:
     print(i)
     i = i+1
+
+
+num = iter(range(1,5))
+while True:
+    try:
+        print(next(num))
+    except StopIteration:
+        break
+
+
+num = range(1,10)
+for i in num:
+    print(i)
+
+num = iter(range(1, 10))
+while True:
+    try:
+        print(next(num))
+    except StopIteration:
+        break
+
+num = iter([1, 2, 3, 4])
+print(next(num))
+print(next(num))
+print(next(num))
+print(next(num))
+print(next(num))
+
+
+num = iter([10, 20, 30, 40])
+while True:
+    try:
+        print(next(num))
+    except StopIteration:
+        print("Iteration Finished")
+        break
+
+
+def my_generator():
+    yield 1
+    yield 2
+    yield 3
+gen = my_generator()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+
+def my_fn():
+    return [1, 2, 3]
+print(my_fn())
+
+def infinite_num():
+    num = 1
+    while True:
+        yield num
+        num +=1
+gen = infinite_num()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+
+
+def countdown(n):
+    while n>0:
+        yield n
+        n-=1
+for num in countdown(5):
+    print (num)
+
+# Listof numbers
+my_list = [1, 2, 3, 3, 5,1, 2, 3, 3, 5, ]
+print(len(my_list))
+
+# Mixed List
+mixed = ["Komal", True, 1, 3.254]
+print(mixed[-4])
+
+# Changing List element
+mixed = ["Komal", True, 1, 3.254]
+mixed[3] = "Sana"
+print(mixed)
+
+# Adding List element by append() and insert() method
+mixed = ["Komal", True, 1, 3.254]
+mixed.append("Asma")
+mixed.insert(1, "Hira")
+print(mixed)
+
+
+# Removing elements from List by pop(), remove() and del()
+mixed = ["Komal", 1, True, 3.254]
+# mixed.pop(0)
+# del mixed[0]
+mixed.remove(next(x for x in mixed if x is True))
+print(mixed)
+
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+mixed.remove(next(x for x in mixed if x is not True))
+print(mixed)
+
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+mixed = [x for x in mixed if x != True]
+print(mixed)
+
+
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+mixed.clear()
+print(mixed)
+
+
+# Looping through a list   
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+for i in mixed:
+    print(i)
+
+
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+i=0
+while i < len(mixed):
+    print(mixed[i])
+    i +=1
+
+mixed = ["Komal", 1, True, 3.254,  False, "", None]
+print(mixed[1:3])
+print(mixed[:3])
+print(mixed[2:])
+print(mixed[::1])
+print(mixed[::2])
+print(mixed[::3])
+print(mixed[::4])
+
+
+numbers = [x*2 for x in range(1, 6)]
+print(numbers)
+
+numbers = [x**2 for x in range(1, 6)]
+print(numbers)
+
+
+
+# Tuples
+my_tup = (1, True, "Komal", 3.1258)
+print(my_tup[1])
+
+single_tup = ("Komal",)
+print(single_tup)
